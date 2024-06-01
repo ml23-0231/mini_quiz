@@ -1,12 +1,16 @@
 def exam_grade(score):
-    if score > 90:
+    if score > 100:
+        grade = None
+    elif score > 90:
         grade = "A"
     elif score >= 85:
         grade = "B"
-    elif score < 65:
+    elif score >= 75:
         grade = "C"
-    else:
+    elif score >= 0:
         grade = "D"
+    else:
+        grade = None
     return grade
     
 print(exam_grade(101))  # Should be None
